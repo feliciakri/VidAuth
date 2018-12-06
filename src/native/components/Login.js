@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Font } from 'expo';
 import {
   Container, Content, Form, Item, Label, Input, Text, Button, View,
 } from 'native-base';
+import { Image } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import Loading from './Loading';
 import Messages from './Messages';
@@ -65,43 +67,40 @@ class Login extends React.Component {
     if (loading) return <Loading />;
 
     return (
-      <Container>
+      <Container
+        style={{
+          backgroundColor: '#707070',
+        }}
+      >
         <Content>
           <View padder>
-            <Header
-              title="Welcome back"
-              content="Please use your email and password to login."
+            <Image
+              source={{ uri: 'https://drive.google.com/open?id=1u0fkYjroFZyR8vJOHSDD8fiyO-k6qb51' }}
+              style={{
+                height: 100,
+                width: 100,
+                flex: 1,
+              }}
             />
-            { success ? <Messages type="success" message={success} /> : null }
-            { error ? <Messages message={error} /> : null }
+          </View>
+          <View padder>
+            <Header
+              title="Secured By VidAuth"
+              style={{
+                color: '#ffffff',
+                textAlign: 'center',
+              }}
+            />
           </View>
 
           <Form>
-            <Item stackedLabel>
-              <Label>
-                {translate('Email', locale)}
-              </Label>
-              <Input
-                autoCapitalize="none"
-                value={email}
-                keyboardType="email-address"
-                onChangeText={v => this.handleChange('email', v)}
-              />
-            </Item>
-            <Item stackedLabel>
-              <Label>
-                {translate('Password', locale)}
-              </Label>
-              <Input
-                secureTextEntry
-                onChangeText={v => this.handleChange('password', v)}
-              />
-            </Item>
-
-            <Spacer size={20} />
-
             <View padder>
-              <Button block onPress={this.handleSubmit}>
+              <Button success block rounded onPress={this.handleSubmit}>
+                <Text>Sign Up</Text>
+              </Button>
+            </View>
+            <View padder>
+              <Button success block rounded onPress={this.handleSubmit}>
                 <Text>
                   {translate('Login', locale)}
                 </Text>

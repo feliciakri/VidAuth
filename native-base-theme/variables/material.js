@@ -17,7 +17,6 @@ export default {
   androidRipple: true,
   androidRippleColor: "rgba(256, 256, 256, 0.3)",
   androidRippleColorDark: "rgba(0, 0, 0, 0.15)",
-  btnUppercaseAndroidText: true,
 
   // Badge
   badgeBg: "#ED1727",
@@ -41,7 +40,7 @@ export default {
     return this.inverseTextColor;
   },
   get btnSuccessBg() {
-    return this.brandSuccess;
+    return '#33A2F7';
   },
   get btnSuccessColor() {
     return this.inverseTextColor;
@@ -97,7 +96,7 @@ export default {
   // Color
   brandPrimary: "#3F51B5",
   brandInfo: "#62B1F6",
-  brandSuccess: "#5cb85c",
+  brandSuccess: "#33A2F7",
   brandDanger: "#d9534f",
   brandWarning: "#f0ad4e",
   brandDark: "#000",

@@ -218,7 +218,7 @@ export default (variables = variable) => {
 
     '.block': {
       justifyContent: 'center',
-      alignSelf: 'stretch',
+      flex: 60,
     },
 
     '.full': {
@@ -229,7 +229,8 @@ export default (variables = variable) => {
 
     '.rounded': {
       // paddingHorizontal: variables.buttonPadding + 20,
-      borderRadius: variables.borderRadiusLarge,
+      // borderRadius: variables.borderRadiusLarge,
+      borderRadius: 20,
     },
 
     '.transparent': {
@@ -323,7 +324,6 @@ export default (variables = variable) => {
       lineHeight: variables.btnLineHeight,
       paddingHorizontal: 16,
       backgroundColor: 'transparent',
-      fontWeight: '700',
       // childPosition: 1
     },
 
