@@ -27,10 +27,21 @@ import EmailConfirmationComponent from '../components/EmailConfirmation';
 import PassbioContainer from '../../containers/Passbio';
 import PassbioComponent from '../components/Passbio';
 
+import TMDContainer from '../../containers/TMDInformation';
+import TMDComponent from '../components/TMDInformation';
+
 import FingerprintSetupContainer from '../../containers/FingerprintSetup';
 import FingerprintSetupComponent from '../components/FingerprintSetup';
 
+import SetupPageContainer from '../../containers/SetupPage';
+import SetupPageVoiceContainer from '../../containers/SetupPageVoice';
+import SetupPagePicContainer from '../../containers/SetupPicturePass';
+import SetupPageSecureContainer from '../../containers/SetupSecure';
+
 import SetupPageComponent from '../components/SetupPage';
+import SetupPageVoiceComponent from '../components/SetupPageVoice';
+import SetupPagePictureComponent from '../components/SetupPagePicture';
+import SetupPageSecureComponent from '../components/SetupPageSecure';
 
 import ForgotPasswordContainer from '../../containers/ForgotPassword';
 import ForgotPasswordComponent from '../components/ForgotPassword';
@@ -87,7 +98,7 @@ const Index = (
             title="LOGIN"
             {...DefaultProps.navbarProps}
             component={LoginContainer}
-            Layout={SetupPageComponent}
+            Layout={LoginComponent}
           />
           <Scene
             back
@@ -136,6 +147,46 @@ const Index = (
             {...DefaultProps.navbarProps}
             component={FingerprintSetupContainer}
             Layout={FingerprintSetupComponent}
+          />
+          <Scene
+            back
+            key="setupFacial"
+            title="SETUP FACIAL"
+            {...DefaultProps.navbarProps}
+            component={SetupPageContainer}
+            Layout={SetupPageComponent}
+          />
+          <Scene
+            back
+            key="setupPageVoice"
+            title="SETUP VOICE"
+            {...DefaultProps.navbarProps}
+            component={SetupPageVoiceContainer}
+            Layout={SetupPageVoiceComponent}
+          />
+          <Scene
+            back
+            key="setupPagePicture"
+            title="SETUP PIC"
+            {...DefaultProps.navbarProps}
+            component={SetupPagePicContainer}
+            Layout={SetupPagePictureComponent}
+          />
+          <Scene
+            back
+            key="setupPageSecure"
+            title="SETUP SECURE"
+            {...DefaultProps.navbarProps}
+            component={SetupPageSecureContainer}
+            Layout={SetupPageSecureComponent}
+          />
+          <Scene
+            back
+            key="tmd"
+            title="TMD"
+            {...DefaultProps.navbarProps}
+            component={TMDContainer}
+            Layout={TMDComponent}
           />
           {/* <Scene
             back
