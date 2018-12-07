@@ -8,7 +8,7 @@ import { Image } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import Loading from './Loading';
 
-class OTPConfirmation extends React.Component {
+class FingerprintSetup extends React.Component {
   static propTypes = {
     error: PropTypes.string,
     loading: PropTypes.bool.isRequired,
@@ -58,34 +58,6 @@ class OTPConfirmation extends React.Component {
         }}
       >
         <Content>
-          <View
-            padder
-            style={{
-              flex:1,
-              flexDirection: 'row',
-              flexWrap: 'wrap',
-              alignItems: 'flex-start',
-            }}
-          >
-            <Text style={{
-              width: '50%',
-              marginTop: 10,
-              padding: 5,
-              textAlign: 'left',
-            }}>
-              upin@ipin@co.id
-            </Text>
-            <Text style={{
-              width: '50%',
-              textAlign: 'right',
-              marginTop: 10,
-              padding: 5,
-              color: '#FE56B0',
-              textDecorationLine: 'underline',
-            }}>
-              Not You?
-            </Text>
-          </View>
           <View padder>
             <Text
               style={{
@@ -100,7 +72,7 @@ class OTPConfirmation extends React.Component {
                 margin: 20,
               }}
             >
-             one more step
+             fingerprint setup
             </Text>
           </View>
 
@@ -108,13 +80,13 @@ class OTPConfirmation extends React.Component {
             <Image
               style={{
                 marginTop:10,
-                width: 250,
-                height: 250,
+                width: 150,
+                height: 200,
                 flex: 1,
                 alignItems: 'center',
                 alignSelf: 'center',
                }}
-              source={require( '../../images/undraw_mail_2_tqip.png')}
+              source={require( '../../images/fingerprint.png')}
             />
           </View>
 
@@ -122,7 +94,7 @@ class OTPConfirmation extends React.Component {
             <Text
               style={{
                 backgroundColor: 'transparent',
-                fontSize: 24,
+                fontSize: 18,
                 color: '#707070',
                 fontWeight: "300",
                 alignItems: 'center',
@@ -131,27 +103,9 @@ class OTPConfirmation extends React.Component {
                 margin: 20,
               }}
             >
-             Click the authorization link we sent to upin@ipin.co.id
+             We need your permission to access your fingerprints
             </Text>
           </View>
-
-          <View padder>
-            <Text
-              style={{
-                backgroundColor: 'transparent',
-                fontSize: 12,
-                color: '#707070',
-                fontWeight: "300",
-                alignItems: 'center',
-                alignSelf: 'center',
-                textAlign: 'center',
-                margin: 20,
-              }}
-            >
-             Your email may take a few moments to arrive. Check spam folder if you don't receive it. Please waite 28 seconds before trying to resend
-            </Text>
-          </View>
-
           <Form>
             <LinearGradient
               colors={['#A13BFD', '#33A2F7']}
@@ -169,25 +123,9 @@ class OTPConfirmation extends React.Component {
                   }}
                   onPress={Actions.passbio}
                 >
-                 Set Up Biometric Password
+                 Continue
                 </Text>
             </LinearGradient>
-            <View padder>
-              <Text
-                style={{
-                  backgroundColor: 'transparent',
-                  fontSize: 15,
-                  color: '#FE56B0',
-                  alignItems: 'center',
-                  alignSelf: 'center',
-                  textAlign: 'center',
-                  textDecorationLine: 'underline',
-                }}
-                onPress={Actions.signUp}
-              >
-                I need help
-              </Text>
-            </View>
           </Form>
         </Content>
       </Container>
@@ -195,4 +133,4 @@ class OTPConfirmation extends React.Component {
   }
 }
 
-export default OTPConfirmation;
+export default FingerprintSetup;

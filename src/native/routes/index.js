@@ -24,6 +24,14 @@ import OTPConfirmationComponent from '../components/OTPConfirmation';
 import EmailConfirmationContainer from '../../containers/EmailConfirmation';
 import EmailConfirmationComponent from '../components/EmailConfirmation';
 
+import PassbioContainer from '../../containers/Passbio';
+import PassbioComponent from '../components/Passbio';
+
+import FingerprintSetupContainer from '../../containers/FingerprintSetup';
+import FingerprintSetupComponent from '../components/FingerprintSetup';
+
+import SetupPageComponent from '../components/SetupPage';
+
 import ForgotPasswordContainer from '../../containers/ForgotPassword';
 import ForgotPasswordComponent from '../components/ForgotPassword';
 
@@ -79,7 +87,7 @@ const Index = (
             title="LOGIN"
             {...DefaultProps.navbarProps}
             component={LoginContainer}
-            Layout={LoginComponent}
+            Layout={SetupPageComponent}
           />
           <Scene
             back
@@ -112,6 +120,22 @@ const Index = (
             {...DefaultProps.navbarProps}
             component={EmailConfirmationContainer}
             Layout={EmailConfirmationComponent}
+          />
+          <Scene
+            back
+            key="passbio"
+            title="PASS BIO"
+            {...DefaultProps.navbarProps}
+            component={PassbioContainer}
+            Layout={PassbioComponent}
+          />
+          <Scene
+            back
+            key="fingerprintSetup"
+            title="PASS BIO"
+            {...DefaultProps.navbarProps}
+            component={FingerprintSetupContainer}
+            Layout={FingerprintSetupComponent}
           />
           {/* <Scene
             back

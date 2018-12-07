@@ -69,7 +69,7 @@ class Login extends React.Component {
           <View padder>
             <Image
               style={{
-                marginTop:10,
+                marginTop:100,
                 width: 250,
                 height: 250,
                 flex: 1,
