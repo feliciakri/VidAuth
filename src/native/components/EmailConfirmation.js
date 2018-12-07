@@ -4,10 +4,11 @@ import {
   Container, Content, Text, Form, Button, View,
 } from 'native-base';
 import { LinearGradient } from 'expo';
+import { Image } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import Loading from './Loading';
 
-class AccessPhonePage extends React.Component {
+class OTPConfirmation extends React.Component {
   static propTypes = {
     error: PropTypes.string,
     loading: PropTypes.bool.isRequired,
@@ -99,8 +100,22 @@ class AccessPhonePage extends React.Component {
                 margin: 20,
               }}
             >
-             do you have access to this phone?
+             one more step
             </Text>
+          </View>
+
+          <View padder>
+            <Image
+              style={{
+                marginTop:10,
+                width: 250,
+                height: 250,
+                flex: 1,
+                alignItems: 'center',
+                alignSelf: 'center',
+               }}
+              source={require( '../../images/undraw_mail_2_tqip.png')}
+            />
           </View>
 
           <View padder>
@@ -116,7 +131,7 @@ class AccessPhonePage extends React.Component {
                 margin: 20,
               }}
             >
-             +62838 ******61
+             Click the authorization link we sent to upin@ipin.co.id
             </Text>
           </View>
 
@@ -133,32 +148,30 @@ class AccessPhonePage extends React.Component {
                 margin: 20,
               }}
             >
-             This phone number is linked to your account. You will receive an OTP to this number to access your account
+             Your email may take a few moments to arrive. Check spam folder if you don't receive it. Please waite 28 seconds before trying to resend
             </Text>
           </View>
 
           <Form>
-            <View padder>
-              <LinearGradient
-                colors={['#A13BFD', '#33A2F7']}
-                style={{
-                  padding: 15, alignItems: 'center', borderRadius: 40, marginHorizontal: 50,
-                }}
-                start={{ x: 0, y: 0 }}
-                end={{ x: 1, y: 1 }}
-              >
+            <LinearGradient
+              colors={['#A13BFD', '#33A2F7']}
+              style={{
+                padding: 15, alignItems: 'center', borderRadius: 40, marginHorizontal: 50,
+              }}
+              start={{ x: 0, y: 0 }}
+              end={{ x: 1, y: 1 }}
+            >
                 <Text
                   style={{
                     backgroundColor: 'transparent',
                     fontSize: 15,
                     color: '#fff',
                   }}
-                  onPress={Actions.otpConfirmation}
+                  onPress={Actions.signUp}
                 >
-                 Yes
+                 Set Up Biometric Password
                 </Text>
-              </LinearGradient>
-            </View>
+            </LinearGradient>
             <View padder>
               <Text
                 style={{
@@ -172,7 +185,7 @@ class AccessPhonePage extends React.Component {
                 }}
                 onPress={Actions.signUp}
               >
-                I don't have access to this phone
+                I need help
               </Text>
             </View>
           </Form>
@@ -182,4 +195,4 @@ class AccessPhonePage extends React.Component {
   }
 }
 
-export default AccessPhonePage;
+export default OTPConfirmation;

@@ -7,7 +7,7 @@ import { LinearGradient } from 'expo';
 import { Actions } from 'react-native-router-flux';
 import Loading from './Loading';
 
-class AccessPhonePage extends React.Component {
+class OTPConfirmation extends React.Component {
   static propTypes = {
     error: PropTypes.string,
     loading: PropTypes.bool.isRequired,
@@ -99,7 +99,7 @@ class AccessPhonePage extends React.Component {
                 margin: 20,
               }}
             >
-             do you have access to this phone?
+             sent!
             </Text>
           </View>
 
@@ -116,7 +116,7 @@ class AccessPhonePage extends React.Component {
                 margin: 20,
               }}
             >
-             +62838 ******61
+             Enter the OTP we sent to +62838 ******61
             </Text>
           </View>
 
@@ -133,7 +133,7 @@ class AccessPhonePage extends React.Component {
                 margin: 20,
               }}
             >
-             This phone number is linked to your account. You will receive an OTP to this number to access your account
+             Your OTP may take a few moments to arrive. Do not share this OTP with anyone. Please wait 44 seconds before trying to resend
             </Text>
           </View>
 
@@ -153,9 +153,9 @@ class AccessPhonePage extends React.Component {
                     fontSize: 15,
                     color: '#fff',
                   }}
-                  onPress={Actions.otpConfirmation}
+                  onPress={Actions.emailConfirmation}
                 >
-                 Yes
+                 Verify
                 </Text>
               </LinearGradient>
             </View>
@@ -182,4 +182,4 @@ class AccessPhonePage extends React.Component {
   }
 }
 
-export default AccessPhonePage;
+export default OTPConfirmation;

@@ -18,6 +18,12 @@ import LoginComponent from '../components/Login';
 import AccessPhonePageContainer from '../../containers/AccessPhonePage';
 import AccessPhonePageComponent from '../components/AccessPhonePage';
 
+import OTPConfirmationContainer from '../../containers/OTPConfirmation';
+import OTPConfirmationComponent from '../components/OTPConfirmation';
+
+import EmailConfirmationContainer from '../../containers/EmailConfirmation';
+import EmailConfirmationComponent from '../components/EmailConfirmation';
+
 import ForgotPasswordContainer from '../../containers/ForgotPassword';
 import ForgotPasswordComponent from '../components/ForgotPassword';
 
@@ -90,6 +96,22 @@ const Index = (
             {...DefaultProps.navbarProps}
             component={AccessPhonePageContainer}
             Layout={AccessPhonePageComponent}
+          />
+          <Scene
+            back
+            key="otpConfirmation"
+            title="OTP CONFIRMATION"
+            {...DefaultProps.navbarProps}
+            component={OTPConfirmationContainer}
+            Layout={OTPConfirmationComponent}
+          />
+          <Scene
+            back
+            key="emailConfirmation"
+            title="EMAIL CONFIRMATION"
+            {...DefaultProps.navbarProps}
+            component={EmailConfirmationContainer}
+            Layout={EmailConfirmationComponent}
           />
           {/* <Scene
             back
