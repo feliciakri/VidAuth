@@ -219,6 +219,7 @@ export default (variables = variable) => {
     '.block': {
       justifyContent: 'center',
       flex: 60,
+      marginHorizontal:50
     },
 
     '.full': {
@@ -230,7 +231,7 @@ export default (variables = variable) => {
     '.rounded': {
       // paddingHorizontal: variables.buttonPadding + 20,
       // borderRadius: variables.borderRadiusLarge,
-      borderRadius: 20,
+      borderRadius: 40,
     },
 
     '.transparent': {

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Font } from 'expo';
+import { Font, LinearGradient } from 'expo';
 import {
   Container, Content, Form, Item, Label, Input, Text, Button, View,
 } from 'native-base';
@@ -95,9 +95,22 @@ class Login extends React.Component {
 
           <Form>
             <View padder>
-              <Button success block rounded onPress={this.handleSubmit}>
-                <Text>Sign Up</Text>
-              </Button>
+              <LinearGradient
+                colors={['#A13BFD','#33A2F7']}
+                style={{ padding: 15, alignItems: 'center', borderRadius: 40, marginHorizontal:50 }}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 1 }}
+              >
+                <Text
+                  style={{
+                    backgroundColor: 'transparent',
+                    fontSize: 15,
+                    color: '#fff',
+                  }}
+                >
+                 Sign Up
+                </Text>
+              </LinearGradient>
             </View>
             <View padder>
               <Button success block rounded onPress={this.handleSubmit}>
