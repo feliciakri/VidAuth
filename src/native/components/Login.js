@@ -1,16 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Font, LinearGradient } from 'expo';
+import { LinearGradient } from 'expo';
 import {
-  Container, Content, Form, Item, Label, Input, Text, Button, View,
+  Container, Content, Form, Text, Button, View,
 } from 'native-base';
 import { Image } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import Loading from './Loading';
-import Messages from './Messages';
-import { translate } from '../../i18n';
-import Header from './Header';
-import Spacer from './Spacer';
 
 class Login extends React.Component {
   static propTypes = {
@@ -49,6 +45,7 @@ class Login extends React.Component {
   }
 
   handleSubmit = () => {
+    console.log("huaaaaaaaa");
     const { onFormSubmit } = this.props;
     onFormSubmit(this.state)
       .then(() => Actions.pop())
@@ -58,11 +55,7 @@ class Login extends React.Component {
   render() {
     const {
       loading,
-      error,
-      success,
-      locale,
     } = this.props;
-    const { email } = this.state;
 
     if (loading) return <Loading />;
 
@@ -113,21 +106,22 @@ class Login extends React.Component {
                 start={{ x: 0, y: 0 }}
                 end={{ x: 1, y: 1 }}
               >
-                <Text
-                  style={{
-                    backgroundColor: 'transparent',
-                    fontSize: 15,
-                    color: '#fff',
-                  }}
-                >
-                 Sign Up
-                </Text>
+                  <Text
+                    style={{
+                      backgroundColor: 'transparent',
+                      fontSize: 15,
+                      color: '#fff',
+                    }}
+                    onPress={Actions.signUp}
+                  >
+                   Sign Up
+                  </Text>
               </LinearGradient>
             </View>
             <View padder>
-              <Button success block rounded onPress={this.handleSubmit}>
+              <Button success block rounded onPress={Actions.signUp}>
                 <Text>
-                  {translate('Login', locale)}
+                  Login
                 </Text>
               </Button>
             </View>

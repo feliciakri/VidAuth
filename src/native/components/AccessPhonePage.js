@@ -1,17 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-  Container, Content, Text, Form, Item, Label, Input, Button, View,
+  Container, Content, Text, Form, Button, View,
 } from 'native-base';
-import { Image } from 'react-native';
-import { Font, LinearGradient } from 'expo';
+import { LinearGradient } from 'expo';
 import { Actions } from 'react-native-router-flux';
 import Loading from './Loading';
-import Messages from './Messages';
-import Header from './Header';
-import Spacer from './Spacer';
 
-class SignUp extends React.Component {
+class AccessPhonePage extends React.Component {
   static propTypes = {
     error: PropTypes.string,
     loading: PropTypes.bool.isRequired,
@@ -62,21 +58,9 @@ class SignUp extends React.Component {
       >
         <Content>
           <View padder>
-            <Image
-              style={{
-                marginTop: 50,
-                width: 200,
-                height: 250,
-                flex: 1,
-                alignItems: 'center',
-                alignSelf: 'center',
-               }}
-              source={require( '../../images/undraw_login_jdch.png')}
-            />
-          </View>
-          <View padder>
             <Text
               style={{
+                paddingTop: 50,
                 backgroundColor: 'transparent',
                 fontSize: 35,
                 color: '#707070',
@@ -87,18 +71,45 @@ class SignUp extends React.Component {
                 margin: 20,
               }}
             >
-             nice to see you again
+             do you have access to this phone?
+            </Text>
+          </View>
+
+          <View padder>
+            <Text
+              style={{
+                backgroundColor: 'transparent',
+                fontSize: 24,
+                color: '#707070',
+                fontWeight: "300",
+                alignItems: 'center',
+                alignSelf: 'center',
+                textAlign: 'center',
+                margin: 20,
+              }}
+            >
+             +62838 ******61
+            </Text>
+          </View>
+
+          <View padder>
+            <Text
+              style={{
+                backgroundColor: 'transparent',
+                fontSize: 12,
+                color: '#707070',
+                fontWeight: "300",
+                alignItems: 'center',
+                alignSelf: 'center',
+                textAlign: 'center',
+                margin: 20,
+              }}
+            >
+             This phone number is linked to your account. You will receive an OTP to this number to access your account
             </Text>
           </View>
 
           <Form>
-            <View padder>
-              <Button light block rounded onPress={this.handleSubmit}>
-                <Text>
-                  Email
-                </Text>
-              </Button>
-            </View>
             <View padder>
               <LinearGradient
                 colors={['#A13BFD', '#33A2F7']}
@@ -114,9 +125,8 @@ class SignUp extends React.Component {
                     fontSize: 15,
                     color: '#fff',
                   }}
-                  onPress={Actions.accessPhonePage}
                 >
-                 Continue
+                 Yes
                 </Text>
               </LinearGradient>
             </View>
@@ -133,7 +143,7 @@ class SignUp extends React.Component {
                 }}
                 onPress={Actions.signUp}
               >
-                I need help logging in
+                I don't have access to this phone
               </Text>
             </View>
           </Form>
@@ -143,4 +153,4 @@ class SignUp extends React.Component {
   }
 }
 
-export default SignUp;
+export default AccessPhonePage;

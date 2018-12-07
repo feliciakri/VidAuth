@@ -15,6 +15,9 @@ import SignUpComponent from '../components/SignUp';
 import LoginContainer from '../../containers/Login';
 import LoginComponent from '../components/Login';
 
+import AccessPhonePageContainer from '../../containers/AccessPhonePage';
+import AccessPhonePageComponent from '../components/AccessPhonePage';
+
 import ForgotPasswordContainer from '../../containers/ForgotPassword';
 import ForgotPasswordComponent from '../components/ForgotPassword';
 
@@ -32,7 +35,7 @@ import AboutComponent from '../components/About';
 const Index = (
   <Stack hideNavBar>
     <Scene hideNavBar>
-      <Tabs
+      {/* <Tabs
         key="tabbar"
         swipeEnabled
         type="replace"
@@ -55,15 +58,23 @@ const Index = (
           {...DefaultProps.navbarProps}
         >
           <Scene key="recipes" component={RecipesContainer} Layout={RecipesComponent} />
-        </Stack>
+        </Stack> */}
 
-        <Stack
+        {/* <Stack
           key="profile"
           title="PROFILE"
           icon={() => <Icon name="contact" {...DefaultProps.icons} />}
           {...DefaultProps.navbarProps}
-        >
-          <Scene key="profileHome" component={MemberContainer} Layout={ProfileComponent} />
+        > */}
+          {/* <Scene key="profileHome" component={MemberContainer} Layout={ProfileComponent} /> */}
+          <Scene
+            back
+            key="login"
+            title="LOGIN"
+            {...DefaultProps.navbarProps}
+            component={LoginContainer}
+            Layout={LoginComponent}
+          />
           <Scene
             back
             key="signUp"
@@ -74,13 +85,13 @@ const Index = (
           />
           <Scene
             back
-            key="login"
-            title="LOGIN"
+            key="accessPhonePage"
+            title="ACCESS PHONE PAGE"
             {...DefaultProps.navbarProps}
-            component={LoginContainer}
-            Layout={LoginComponent}
+            component={AccessPhonePageContainer}
+            Layout={AccessPhonePageComponent}
           />
-          <Scene
+          {/* <Scene
             back
             key="forgotPassword"
             title="FORGOT PASSWORD"
@@ -104,19 +115,9 @@ const Index = (
             component={UpdateProfileContainer}
             Layout={UpdateProfileComponent}
           />
-        </Stack>
-      </Tabs>
+        </Stack> */}
+      {/* </Tabs> */}
     </Scene>
-
-    <Scene
-      back
-      clone
-      key="recipe"
-      title="RECIPE"
-      {...DefaultProps.navbarProps}
-      component={RecipesContainer}
-      Layout={RecipeViewComponent}
-    />
   </Stack>
 );
 
