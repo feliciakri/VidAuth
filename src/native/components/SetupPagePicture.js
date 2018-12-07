@@ -99,7 +99,7 @@ class SetupPagePicture extends React.Component {
                   fontSize: 15,
                   color: '#fff',
                 }}
-                onPress={Actions.tmd}
+                onPress={Actions.picpass}
               >
                 I'm ready
               </Text>

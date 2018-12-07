@@ -100,7 +100,7 @@ class SetupPageSecure extends React.Component {
                   fontSize: 15,
                   color: '#fff',
                 }}
-                onPress={Actions.setupPageSecure}
+                onPress={Actions.lock}
               >
                 understood
               </Text>

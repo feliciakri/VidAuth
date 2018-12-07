@@ -1,13 +1,8 @@
 import React from 'react';
 import { Scene, Tabs, Stack } from 'react-native-router-flux';
-import { Icon } from 'native-base';
 
 import DefaultProps from '../constants/navigation';
 import AppConfig from '../../constants/config';
-
-import RecipesContainer from '../../containers/Recipes';
-import RecipesComponent from '../components/Recipes';
-import RecipeViewComponent from '../components/Recipe';
 
 import SignUpContainer from '../../containers/SignUp';
 import SignUpComponent from '../components/SignUp';
@@ -43,55 +38,13 @@ import SetupPageVoiceComponent from '../components/SetupPageVoice';
 import SetupPagePictureComponent from '../components/SetupPagePicture';
 import SetupPageSecureComponent from '../components/SetupPageSecure';
 
-import ForgotPasswordContainer from '../../containers/ForgotPassword';
-import ForgotPasswordComponent from '../components/ForgotPassword';
-
-import LocaleContainer from '../../containers/Locale';
-import LocaleComponent from '../components/Locale';
-
-import UpdateProfileContainer from '../../containers/UpdateProfile';
-import UpdateProfileComponent from '../components/UpdateProfile';
-
-import MemberContainer from '../../containers/Member';
-import ProfileComponent from '../components/Profile';
-
-import AboutComponent from '../components/About';
+import LockContainer from '../../containers/Lock';
+import LockComponent from '../components/Lock';
+import PicpassComponent from '../components/Picpass';
 
 const Index = (
   <Stack hideNavBar>
     <Scene hideNavBar>
-      {/* <Tabs
-        key="tabbar"
-        swipeEnabled
-        type="replace"
-        showLabel={false}
-        {...DefaultProps.tabProps}
-      >
-        <Stack
-          key="home"
-          title={AppConfig.appName.toUpperCase()}
-          icon={() => <Icon name="planet" {...DefaultProps.icons} />}
-          {...DefaultProps.navbarProps}
-        >
-          <Scene key="home" component={AboutComponent} />
-        </Stack>
-
-        <Stack
-          key="recipes"
-          title="RECIPES"
-          icon={() => <Icon name="book" {...DefaultProps.icons} />}
-          {...DefaultProps.navbarProps}
-        >
-          <Scene key="recipes" component={RecipesContainer} Layout={RecipesComponent} />
-        </Stack> */}
-
-        {/* <Stack
-          key="profile"
-          title="PROFILE"
-          icon={() => <Icon name="contact" {...DefaultProps.icons} />}
-          {...DefaultProps.navbarProps}
-        > */}
-          {/* <Scene key="profileHome" component={MemberContainer} Layout={ProfileComponent} /> */}
           <Scene
             back
             key="login"
@@ -188,32 +141,22 @@ const Index = (
             component={TMDContainer}
             Layout={TMDComponent}
           />
-          {/* <Scene
+          <Scene
             back
-            key="forgotPassword"
-            title="FORGOT PASSWORD"
+            key="picpass"
+            title="TMD"
             {...DefaultProps.navbarProps}
-            component={ForgotPasswordContainer}
-            Layout={ForgotPasswordComponent}
+            component={LockContainer}
+            Layout={PicpassComponent}
           />
           <Scene
             back
-            key="locale"
-            title="CHANGE LANGUAGE"
+            key="lock"
+            title="TMD"
             {...DefaultProps.navbarProps}
-            component={LocaleContainer}
-            Layout={LocaleComponent}
+            component={LockContainer}
+            Layout={LockComponent}
           />
-          <Scene
-            back
-            key="updateProfile"
-            title="UPDATE PROFILE"
-            {...DefaultProps.navbarProps}
-            component={UpdateProfileContainer}
-            Layout={UpdateProfileComponent}
-          />
-        </Stack> */}
-      {/* </Tabs> */}
     </Scene>
   </Stack>
 );
