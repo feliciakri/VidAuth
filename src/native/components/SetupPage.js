@@ -51,11 +51,11 @@ class SetupPage extends React.Component {
               {messages.title}
             </Text>
           </View>
-
+          <View padder>
+            <List>
           {
             messages.texts.map(message => (
-              <View padder>
-                <List>
+
                   <ListItem onPress={Actions.login} key={message.id}>
                     <Body>
                       <Text
@@ -79,11 +79,11 @@ class SetupPage extends React.Component {
                       </Text>
                     </Body>
                   </ListItem>
-                </List>
-              </View>
+
             ))
           }
-
+        </List>
+      </View>
           <View padder>
             <LinearGradient
               colors={['#A13BFD', '#33A2F7']}

@@ -51,38 +51,39 @@ class SetupPageSecure extends React.Component {
               {messages.title}
             </Text>
           </View>
-
-          {
+          <View padder>
+            <List>
+              {
             messages.texts.map(message => (
-              <View padder>
-                <List>
-                  <ListItem onPress={Actions.login} key={message.id}>
-                    <Body>
-                      <Text
-                        style={{
-                          fontSize: 18,
-                          color: '#707070',
-                          fontWeight: '700',
-                          lineHeight: 30,
-                        }}
-                      >
-                        {message.bold}
-                      </Text>
-                      <Text
-                        style={{
-                          fontSize: 18,
-                          color: '#707070',
-                          fontWeight: '200',
-                        }}
-                      >
-                        {message.body}
-                      </Text>
-                    </Body>
-                  </ListItem>
-                </List>
-              </View>
+
+              <ListItem onPress={Actions.login} key={message.id}>
+                <Body>
+                  <Text
+                    style={{
+                      fontSize: 18,
+                      color: '#707070',
+                      fontWeight: '700',
+                      lineHeight: 30,
+                    }}
+                  >
+                    {message.bold}
+                  </Text>
+                  <Text
+                    style={{
+                      fontSize: 18,
+                      color: '#707070',
+                      fontWeight: '200',
+                    }}
+                  >
+                    {message.body}
+                  </Text>
+                </Body>
+              </ListItem>
+
             ))
           }
+            </List>
+          </View>
 
           <View padder>
             <LinearGradient

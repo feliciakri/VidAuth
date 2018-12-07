@@ -1,7 +1,6 @@
 const messages = {
   facial: {
     title: 'facial recognition setup',
-    next: 'setup-voice',
     texts:
       [
         {
