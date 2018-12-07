@@ -75,29 +75,41 @@ class Login extends React.Component {
         <Content>
           <View padder>
             <Image
-              source={{ uri: 'https://drive.google.com/open?id=1u0fkYjroFZyR8vJOHSDD8fiyO-k6qb51' }}
               style={{
-                height: 100,
-                width: 100,
+                marginTop:10,
+                width: 250,
+                height: 250,
                 flex: 1,
-              }}
+                alignItems: 'center',
+                alignSelf: 'center',
+               }}
+              source={require( '../../images/undraw_Security_on_s9ym.png')}
             />
           </View>
           <View padder>
-            <Header
-              title="Secured By VidAuth"
+            <Text
               style={{
-                color: '#ffffff',
-                textAlign: 'center',
+                backgroundColor: 'transparent',
+                fontSize: 35,
+                color: '#fff',
+                fontWeight: "700",
+                alignItems: 'center',
+                alignSelf: 'center',
+                margin: 20,
               }}
-            />
+            >
+             secured by
+             vidauth
+            </Text>
           </View>
 
           <Form>
             <View padder>
               <LinearGradient
-                colors={['#A13BFD','#33A2F7']}
-                style={{ padding: 15, alignItems: 'center', borderRadius: 40, marginHorizontal:50 }}
+                colors={['#A13BFD', '#33A2F7']}
+                style={{
+                  padding: 15, alignItems: 'center', borderRadius: 40, marginHorizontal: 50,
+                }}
                 start={{ x: 0, y: 0 }}
                 end={{ x: 1, y: 1 }}
               >
