@@ -8,7 +8,7 @@ import { Image } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import Loading from './Loading';
 
-class SetupPage extends React.Component {
+class SetupPageSecure extends React.Component {
   static propTypes = {
     error: PropTypes.string,
     loading: PropTypes.bool.isRequired,
@@ -99,9 +99,9 @@ class SetupPage extends React.Component {
                   fontSize: 15,
                   color: '#fff',
                 }}
-                onPress={Actions.setupPageVoice}
+                onPress={Actions.setupPageSecure}
               >
-                I'm ready
+                understood
               </Text>
             </LinearGradient>
           </View>
@@ -111,4 +111,4 @@ class SetupPage extends React.Component {
   }
 }
 
-export default SetupPage;
+export default SetupPageSecure;

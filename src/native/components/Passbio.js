@@ -110,7 +110,7 @@ class Passbio extends React.Component {
                   fingerprint
                 </Text>
               </ListItem>
-              <ListItem onPress={Actions.login}>
+              <ListItem onPress={Actions.setupFacial}>
                 <Left>
                   <Image
                      source={require( '../../images/iconmonstr-smiley-2-240.png')}
@@ -128,7 +128,7 @@ class Passbio extends React.Component {
                   face + voice
                 </Text>
               </ListItem>
-              <ListItem onPress={Actions.login}>
+              <ListItem onPress={Actions.setupPagePicture}>
                 <Left>
                   <Image
                      source={require( '../../images/iconmonstr-picture-1-240.png')}
